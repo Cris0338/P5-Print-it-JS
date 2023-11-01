@@ -54,7 +54,7 @@ table {
 	border-spacing: 0;
 }
 body {
-
+ 
 }
 section {
 	margin-block: 6em;
@@ -125,6 +125,8 @@ header {
 /* Gestion des fleches du carrousel */
 #banner .arrow {
 	position: absolute;
+	background: transparent;
+	border: none;
 }
 #banner .arrow_left {
 	left: 10px;
@@ -142,10 +144,10 @@ header {
 	margin-inline: 5px;
 	width: 13px;
 	height: 13px;
-	background-color: #ffffff00;
+	background-color: transparent;
 	border: 3px solid #fff;
 	border-radius: 100%;
-	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);;
+	box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 .dot_selected {
 	background-color: #fff;
