@@ -24,7 +24,7 @@ let currentSlide = 0;
 function showSlide() {
     // recherche la balise .banner_img, lui donne une source, lui attribue le tableau et lui indique qoi prendre dans le tableau
     document.querySelector('.banner-img').src = "./assets/images/slideshow/" + slides[currentSlide].image;
-    // recherche la balise .#banner p, lui dit de l'inserer, lui dit d'utiliser celle de l'image utilisée
+    // recherche la balise .#banner p, lui dit de l'inserer, lui dit d'utiliser celle du slide utilisé
     document.querySelector('#banner p').innerHTML = slides[currentSlide].tagLine;
     
     // recherche la balise containeur des dots
