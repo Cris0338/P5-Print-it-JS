@@ -22,19 +22,20 @@ let currentSlide = 0;
 
 // Montre l'image
 function showSlide() {
-    // prend l'image
+    // recherche la balise .banner_img, lui donne une source, lui attribue le tableau et lui indique qoi prendre dans le tableau
     document.querySelector('.banner-img').src = "./assets/images/slideshow/" + slides[currentSlide].image;
-    // prend le tagline de l'image
+    // recherche la balise .#banner p, lui dit de l'inserer, lui dit d'utiliser celle de l'image utilisée
     document.querySelector('#banner p').innerHTML = slides[currentSlide].tagLine;
     
-    // prend le containeur des dots
+    // recherche la balise containeur des dots
     let dots = document.querySelector('.dots');
     // reset des dots
     dots.innerHTML = '';
-    // création du dot inerent à l'image
+    // génération des dots sur le comptages des elements du tableau
     for(let i=0; i<slides.length; i++) {
+        // création du dot
         let dot = document.createElement('span');
-        // si le dot correspond a l'image atribution de la classe 'dot_selected'
+        // attribution de la classe dot, + si le dot correspond === à l'image atribution de la classe 'dot_selected' autrement(:) vide
         dot.className = 'dot' + (i === currentSlide ? ' dot_selected' : '');
         // ajout du dot
         dots.appendChild(dot);
